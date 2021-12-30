@@ -91,14 +91,23 @@
 	# 	puts  "Adding #{Physician.count} to table."
 	# 	puts  "Adding #{Patient.count} to table."
 
-		rand = Random.new
-		Appointment.create([{physician_id:rand(1..30)    , patient_id:rand(1..30) ,appointment_date:DateTime.now,},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30) ,appointment_date:DateTime.now},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
-			{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now}
-		])
-		puts  "Adding #{Appointment.count} to table."
+		# rand = Random.new
+		# Appointment.create([{physician_id:rand(1..30)    , patient_id:rand(1..30) ,appointment_date:DateTime.now,},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30) ,appointment_date:DateTime.now},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now},
+		# 	{physician_id:rand(1..30)     , patient_id:rand(1..30),appointment_date:DateTime.now}
+		# ])
+		# puts  "Adding #{Appointment.count} to table."
+
+		#creating table for account_history
+
+		 10.times do 
+			account_histories = AccountHistory.create(account_id:rand(1..8), credit_rate:rand(400..1000))
+															
+
+		end
+		puts  "Adding #{AccountHistory.count} to table."
