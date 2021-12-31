@@ -15,6 +15,9 @@ gem 'rubocop-faker', '~> 0.2.0'
 #bundele Awesome print
 gem "awesome_print"
 
+#bundle gem pg
+gem 'pg'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
